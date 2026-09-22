@@ -1,0 +1,385 @@
+{
+  "_generated": {
+    "system": "package-json@1.0.0",
+    "status": "generated",
+    "edit": "edit src/ \u2014 dependencies and exports derive from imports; everything else preserved"
+  },
+  "name": "@teamscala/cli-protocol",
+  "capability": "Wire-format adapters for managed CLI agents: history readers, stream parsers, transports (stdio-acp, stdio-app-server, stdio-stream-json, stdio-oneshot-jsonl, http-sse), session stores, and stdin input encoders.",
+  "tier": "primitives",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Wire-format adapters for managed CLI agents: history readers, stream parsers, transports (stdio-acp, stdio-app-server, stdio-stream-json, stdio-oneshot-jsonl, http-sse), session stores, and stdin input encoders.",
+  "sideEffects": false,
+  "imports": {
+    "#cli-session/*": "./src/*",
+    "#cli-session/*.ts": "./src/*.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "@teamscala/event-bus": "*",
+    "@teamscala/logger": "*",
+    "@teamscala/mcp-client-pool": "*",
+    "@teamscala/os": "*",
+    "@teamscala/retry": "*",
+    "@teamscala/safe-fallback": "*",
+    "@teamscala/session-contracts": "*"
+  },
+  "devDependencies": {
+    "bun-types": "*",
+    "@happy-dom/global-registrator": "*",
+    "@testing-library/react": "*"
+  },
+  "exports": {
+    "./history-readers/_claude-history/content-parser": {
+      "types": "./src/history-readers/_claude-history/content-parser.d.ts",
+      "default": "./src/history-readers/_claude-history/content-parser.ts"
+    },
+    "./history-readers/_claude-history/content-parser.ts": {
+      "types": "./src/history-readers/_claude-history/content-parser.d.ts",
+      "default": "./src/history-readers/_claude-history/content-parser.ts"
+    },
+    "./history-readers/_claude-history/line-loader": {
+      "types": "./src/history-readers/_claude-history/line-loader.d.ts",
+      "default": "./src/history-readers/_claude-history/line-loader.ts"
+    },
+    "./history-readers/_claude-history/line-loader.ts": {
+      "types": "./src/history-readers/_claude-history/line-loader.d.ts",
+      "default": "./src/history-readers/_claude-history/line-loader.ts"
+    },
+    "./history-readers/_codex-history/content-parser": {
+      "types": "./src/history-readers/_codex-history/content-parser.d.ts",
+      "default": "./src/history-readers/_codex-history/content-parser.ts"
+    },
+    "./history-readers/_codex-history/content-parser.ts": {
+      "types": "./src/history-readers/_codex-history/content-parser.d.ts",
+      "default": "./src/history-readers/_codex-history/content-parser.ts"
+    },
+    "./history-readers/_codex-history/line-loader": {
+      "types": "./src/history-readers/_codex-history/line-loader.d.ts",
+      "default": "./src/history-readers/_codex-history/line-loader.ts"
+    },
+    "./history-readers/_codex-history/line-loader.ts": {
+      "types": "./src/history-readers/_codex-history/line-loader.d.ts",
+      "default": "./src/history-readers/_codex-history/line-loader.ts"
+    },
+    "./history-readers/claude": {
+      "types": "./src/history-readers/claude.d.ts",
+      "default": "./src/history-readers/claude.ts"
+    },
+    "./history-readers/claude.ts": {
+      "types": "./src/history-readers/claude.d.ts",
+      "default": "./src/history-readers/claude.ts"
+    },
+    "./history-readers/codex": {
+      "types": "./src/history-readers/codex.d.ts",
+      "default": "./src/history-readers/codex.ts"
+    },
+    "./history-readers/codex.ts": {
+      "types": "./src/history-readers/codex.d.ts",
+      "default": "./src/history-readers/codex.ts"
+    },
+    "./input-encoders/index": {
+      "types": "./src/input-encoders/index.d.ts",
+      "default": "./src/input-encoders/index.ts"
+    },
+    "./input-encoders/index.ts": {
+      "types": "./src/input-encoders/index.d.ts",
+      "default": "./src/input-encoders/index.ts"
+    },
+    "./input-encoders": {
+      "types": "./src/input-encoders/index.d.ts",
+      "default": "./src/input-encoders/index.ts"
+    },
+    "./parsers/_claude-stream-json/normalize-map": {
+      "types": "./src/parsers/_claude-stream-json/normalize-map.d.ts",
+      "default": "./src/parsers/_claude-stream-json/normalize-map.ts"
+    },
+    "./parsers/_claude-stream-json/normalize-map.ts": {
+      "types": "./src/parsers/_claude-stream-json/normalize-map.d.ts",
+      "default": "./src/parsers/_claude-stream-json/normalize-map.ts"
+    },
+    "./parsers/_claude-stream-json/usage-extractor": {
+      "types": "./src/parsers/_claude-stream-json/usage-extractor.d.ts",
+      "default": "./src/parsers/_claude-stream-json/usage-extractor.ts"
+    },
+    "./parsers/_claude-stream-json/usage-extractor.ts": {
+      "types": "./src/parsers/_claude-stream-json/usage-extractor.d.ts",
+      "default": "./src/parsers/_claude-stream-json/usage-extractor.ts"
+    },
+    "./parsers/_codex-jsonl/event-mapper": {
+      "types": "./src/parsers/_codex-jsonl/event-mapper.d.ts",
+      "default": "./src/parsers/_codex-jsonl/event-mapper.ts"
+    },
+    "./parsers/_codex-jsonl/event-mapper.ts": {
+      "types": "./src/parsers/_codex-jsonl/event-mapper.d.ts",
+      "default": "./src/parsers/_codex-jsonl/event-mapper.ts"
+    },
+    "./parsers/_codex-jsonl/usage-mapper": {
+      "types": "./src/parsers/_codex-jsonl/usage-mapper.d.ts",
+      "default": "./src/parsers/_codex-jsonl/usage-mapper.ts"
+    },
+    "./parsers/_codex-jsonl/usage-mapper.ts": {
+      "types": "./src/parsers/_codex-jsonl/usage-mapper.d.ts",
+      "default": "./src/parsers/_codex-jsonl/usage-mapper.ts"
+    },
+    "./parsers/_gemini-acp/notification-mapper": {
+      "types": "./src/parsers/_gemini-acp/notification-mapper.d.ts",
+      "default": "./src/parsers/_gemini-acp/notification-mapper.ts"
+    },
+    "./parsers/_gemini-acp/notification-mapper.ts": {
+      "types": "./src/parsers/_gemini-acp/notification-mapper.d.ts",
+      "default": "./src/parsers/_gemini-acp/notification-mapper.ts"
+    },
+    "./parsers/_gemini-acp/type-guards": {
+      "types": "./src/parsers/_gemini-acp/type-guards.d.ts",
+      "default": "./src/parsers/_gemini-acp/type-guards.ts"
+    },
+    "./parsers/_gemini-acp/type-guards.ts": {
+      "types": "./src/parsers/_gemini-acp/type-guards.d.ts",
+      "default": "./src/parsers/_gemini-acp/type-guards.ts"
+    },
+    "./parsers/_gemini-acp/usage-extractor": {
+      "types": "./src/parsers/_gemini-acp/usage-extractor.d.ts",
+      "default": "./src/parsers/_gemini-acp/usage-extractor.ts"
+    },
+    "./parsers/_gemini-acp/usage-extractor.ts": {
+      "types": "./src/parsers/_gemini-acp/usage-extractor.d.ts",
+      "default": "./src/parsers/_gemini-acp/usage-extractor.ts"
+    },
+    "./parsers/claude-stream-json": {
+      "types": "./src/parsers/claude-stream-json.d.ts",
+      "default": "./src/parsers/claude-stream-json.ts"
+    },
+    "./parsers/claude-stream-json.ts": {
+      "types": "./src/parsers/claude-stream-json.d.ts",
+      "default": "./src/parsers/claude-stream-json.ts"
+    },
+    "./parsers/codex-jsonl": {
+      "types": "./src/parsers/codex-jsonl.d.ts",
+      "default": "./src/parsers/codex-jsonl.ts"
+    },
+    "./parsers/codex-jsonl.ts": {
+      "types": "./src/parsers/codex-jsonl.d.ts",
+      "default": "./src/parsers/codex-jsonl.ts"
+    },
+    "./parsers/gemini-acp": {
+      "types": "./src/parsers/gemini-acp.d.ts",
+      "default": "./src/parsers/gemini-acp.ts"
+    },
+    "./parsers/gemini-acp.ts": {
+      "types": "./src/parsers/gemini-acp.d.ts",
+      "default": "./src/parsers/gemini-acp.ts"
+    },
+    "./parsers/gemini-acp-responses": {
+      "types": "./src/parsers/gemini-acp-responses.d.ts",
+      "default": "./src/parsers/gemini-acp-responses.ts"
+    },
+    "./parsers/gemini-acp-responses.ts": {
+      "types": "./src/parsers/gemini-acp-responses.d.ts",
+      "default": "./src/parsers/gemini-acp-responses.ts"
+    },
+    "./parsers/opencode": {
+      "types": "./src/parsers/opencode.d.ts",
+      "default": "./src/parsers/opencode.ts"
+    },
+    "./parsers/opencode.ts": {
+      "types": "./src/parsers/opencode.d.ts",
+      "default": "./src/parsers/opencode.ts"
+    },
+    "./session-stores/claude-projects": {
+      "types": "./src/session-stores/claude-projects.d.ts",
+      "default": "./src/session-stores/claude-projects.ts"
+    },
+    "./session-stores/claude-projects.ts": {
+      "types": "./src/session-stores/claude-projects.d.ts",
+      "default": "./src/session-stores/claude-projects.ts"
+    },
+    "./session-stores/codex-rollout": {
+      "types": "./src/session-stores/codex-rollout.d.ts",
+      "default": "./src/session-stores/codex-rollout.ts"
+    },
+    "./session-stores/codex-rollout.ts": {
+      "types": "./src/session-stores/codex-rollout.d.ts",
+      "default": "./src/session-stores/codex-rollout.ts"
+    },
+    "./session-stores/index": {
+      "types": "./src/session-stores/index.d.ts",
+      "default": "./src/session-stores/index.ts"
+    },
+    "./session-stores/index.ts": {
+      "types": "./src/session-stores/index.d.ts",
+      "default": "./src/session-stores/index.ts"
+    },
+    "./session-stores": {
+      "types": "./src/session-stores/index.d.ts",
+      "default": "./src/session-stores/index.ts"
+    },
+    "./transports/_http-sse/sse-runner": {
+      "types": "./src/transports/_http-sse/sse-runner.d.ts",
+      "default": "./src/transports/_http-sse/sse-runner.ts"
+    },
+    "./transports/_http-sse/sse-runner.ts": {
+      "types": "./src/transports/_http-sse/sse-runner.d.ts",
+      "default": "./src/transports/_http-sse/sse-runner.ts"
+    },
+    "./transports/_http-sse/types": {
+      "types": "./src/transports/_http-sse/types.d.ts",
+      "default": "./src/transports/_http-sse/types.ts"
+    },
+    "./transports/_http-sse/types.ts": {
+      "types": "./src/transports/_http-sse/types.d.ts",
+      "default": "./src/transports/_http-sse/types.ts"
+    },
+    "./transports/_stdio-acp/block-merger": {
+      "types": "./src/transports/_stdio-acp/block-merger.d.ts",
+      "default": "./src/transports/_stdio-acp/block-merger.ts"
+    },
+    "./transports/_stdio-acp/block-merger.ts": {
+      "types": "./src/transports/_stdio-acp/block-merger.d.ts",
+      "default": "./src/transports/_stdio-acp/block-merger.ts"
+    },
+    "./transports/_stdio-acp/line-handler": {
+      "types": "./src/transports/_stdio-acp/line-handler.d.ts",
+      "default": "./src/transports/_stdio-acp/line-handler.ts"
+    },
+    "./transports/_stdio-acp/line-handler.ts": {
+      "types": "./src/transports/_stdio-acp/line-handler.d.ts",
+      "default": "./src/transports/_stdio-acp/line-handler.ts"
+    },
+    "./transports/_stdio-acp/mcp-capabilities": {
+      "types": "./src/transports/_stdio-acp/mcp-capabilities.d.ts",
+      "default": "./src/transports/_stdio-acp/mcp-capabilities.ts"
+    },
+    "./transports/_stdio-acp/mcp-capabilities.ts": {
+      "types": "./src/transports/_stdio-acp/mcp-capabilities.d.ts",
+      "default": "./src/transports/_stdio-acp/mcp-capabilities.ts"
+    },
+    "./transports/_stdio-acp/process-spawn": {
+      "types": "./src/transports/_stdio-acp/process-spawn.d.ts",
+      "default": "./src/transports/_stdio-acp/process-spawn.ts"
+    },
+    "./transports/_stdio-acp/process-spawn.ts": {
+      "types": "./src/transports/_stdio-acp/process-spawn.d.ts",
+      "default": "./src/transports/_stdio-acp/process-spawn.ts"
+    },
+    "./transports/_stdio-acp/prompt-queue": {
+      "types": "./src/transports/_stdio-acp/prompt-queue.d.ts",
+      "default": "./src/transports/_stdio-acp/prompt-queue.ts"
+    },
+    "./transports/_stdio-acp/prompt-queue.ts": {
+      "types": "./src/transports/_stdio-acp/prompt-queue.d.ts",
+      "default": "./src/transports/_stdio-acp/prompt-queue.ts"
+    },
+    "./transports/_stdio-acp/rpc-tracker": {
+      "types": "./src/transports/_stdio-acp/rpc-tracker.d.ts",
+      "default": "./src/transports/_stdio-acp/rpc-tracker.ts"
+    },
+    "./transports/_stdio-acp/rpc-tracker.ts": {
+      "types": "./src/transports/_stdio-acp/rpc-tracker.d.ts",
+      "default": "./src/transports/_stdio-acp/rpc-tracker.ts"
+    },
+    "./transports/_stdio-acp/stdin-writer": {
+      "types": "./src/transports/_stdio-acp/stdin-writer.d.ts",
+      "default": "./src/transports/_stdio-acp/stdin-writer.ts"
+    },
+    "./transports/_stdio-acp/stdin-writer.ts": {
+      "types": "./src/transports/_stdio-acp/stdin-writer.d.ts",
+      "default": "./src/transports/_stdio-acp/stdin-writer.ts"
+    },
+    "./transports/_stdio-app-server/notification-dispatcher": {
+      "types": "./src/transports/_stdio-app-server/notification-dispatcher.d.ts",
+      "default": "./src/transports/_stdio-app-server/notification-dispatcher.ts"
+    },
+    "./transports/_stdio-app-server/notification-dispatcher.ts": {
+      "types": "./src/transports/_stdio-app-server/notification-dispatcher.d.ts",
+      "default": "./src/transports/_stdio-app-server/notification-dispatcher.ts"
+    },
+    "./transports/_stdio-app-server/process-spawn": {
+      "types": "./src/transports/_stdio-app-server/process-spawn.d.ts",
+      "default": "./src/transports/_stdio-app-server/process-spawn.ts"
+    },
+    "./transports/_stdio-app-server/process-spawn.ts": {
+      "types": "./src/transports/_stdio-app-server/process-spawn.d.ts",
+      "default": "./src/transports/_stdio-app-server/process-spawn.ts"
+    },
+    "./transports/_stdio-oneshot-jsonl/process-spawn": {
+      "types": "./src/transports/_stdio-oneshot-jsonl/process-spawn.d.ts",
+      "default": "./src/transports/_stdio-oneshot-jsonl/process-spawn.ts"
+    },
+    "./transports/_stdio-oneshot-jsonl/process-spawn.ts": {
+      "types": "./src/transports/_stdio-oneshot-jsonl/process-spawn.d.ts",
+      "default": "./src/transports/_stdio-oneshot-jsonl/process-spawn.ts"
+    },
+    "./transports/_stdio-oneshot-jsonl/stream-reader": {
+      "types": "./src/transports/_stdio-oneshot-jsonl/stream-reader.d.ts",
+      "default": "./src/transports/_stdio-oneshot-jsonl/stream-reader.ts"
+    },
+    "./transports/_stdio-oneshot-jsonl/stream-reader.ts": {
+      "types": "./src/transports/_stdio-oneshot-jsonl/stream-reader.d.ts",
+      "default": "./src/transports/_stdio-oneshot-jsonl/stream-reader.ts"
+    },
+    "./transports/_stdio-stream-json/process-spawn": {
+      "types": "./src/transports/_stdio-stream-json/process-spawn.d.ts",
+      "default": "./src/transports/_stdio-stream-json/process-spawn.ts"
+    },
+    "./transports/_stdio-stream-json/process-spawn.ts": {
+      "types": "./src/transports/_stdio-stream-json/process-spawn.d.ts",
+      "default": "./src/transports/_stdio-stream-json/process-spawn.ts"
+    },
+    "./transports/_stdio-stream-json/stream-reader": {
+      "types": "./src/transports/_stdio-stream-json/stream-reader.d.ts",
+      "default": "./src/transports/_stdio-stream-json/stream-reader.ts"
+    },
+    "./transports/_stdio-stream-json/stream-reader.ts": {
+      "types": "./src/transports/_stdio-stream-json/stream-reader.d.ts",
+      "default": "./src/transports/_stdio-stream-json/stream-reader.ts"
+    },
+    "./transports/http-sse": {
+      "types": "./src/transports/http-sse.d.ts",
+      "default": "./src/transports/http-sse.ts"
+    },
+    "./transports/http-sse.ts": {
+      "types": "./src/transports/http-sse.d.ts",
+      "default": "./src/transports/http-sse.ts"
+    },
+    "./transports/stdio-acp": {
+      "types": "./src/transports/stdio-acp.d.ts",
+      "default": "./src/transports/stdio-acp.ts"
+    },
+    "./transports/stdio-acp.ts": {
+      "types": "./src/transports/stdio-acp.d.ts",
+      "default": "./src/transports/stdio-acp.ts"
+    },
+    "./transports/stdio-app-server": {
+      "types": "./src/transports/stdio-app-server.d.ts",
+      "default": "./src/transports/stdio-app-server.ts"
+    },
+    "./transports/stdio-app-server.ts": {
+      "types": "./src/transports/stdio-app-server.d.ts",
+      "default": "./src/transports/stdio-app-server.ts"
+    },
+    "./transports/stdio-oneshot-jsonl": {
+      "types": "./src/transports/stdio-oneshot-jsonl.d.ts",
+      "default": "./src/transports/stdio-oneshot-jsonl.ts"
+    },
+    "./transports/stdio-oneshot-jsonl.ts": {
+      "types": "./src/transports/stdio-oneshot-jsonl.d.ts",
+      "default": "./src/transports/stdio-oneshot-jsonl.ts"
+    },
+    "./transports/stdio-stream-json": {
+      "types": "./src/transports/stdio-stream-json.d.ts",
+      "default": "./src/transports/stdio-stream-json.ts"
+    },
+    "./transports/stdio-stream-json.ts": {
+      "types": "./src/transports/stdio-stream-json.d.ts",
+      "default": "./src/transports/stdio-stream-json.ts"
+    }
+  },
+  "repository": "https://github.com/teamgbg/bun-primitives-cli-protocol",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}
