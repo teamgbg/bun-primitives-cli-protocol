@@ -5,11 +5,11 @@
     "edit": "edit src/ \u2014 dependencies and exports derive from imports; everything else preserved"
   },
   "name": "@teamscala/cli-protocol",
-  "capability": "Wire-format adapters for managed CLI agents: history readers, stream parsers, transports (stdio-acp, stdio-app-server, stdio-stream-json, stdio-oneshot-jsonl, http-sse), session stores, and stdin input encoders.",
+  "capability": "Wire-format adapters for managed CLI agents: history readers, stream parsers, transports (stdio-acp, stdio-app-server, stdio-stream-json, stdio-oneshot-jsonl), session stores, and stdin input encoders.",
   "tier": "primitives",
   "type": "module",
   "version": "1.0.0",
-  "description": "Wire-format adapters for managed CLI agents: history readers, stream parsers, transports (stdio-acp, stdio-app-server, stdio-stream-json, stdio-oneshot-jsonl, http-sse), session stores, and stdin input encoders.",
+  "description": "Wire-format adapters for managed CLI agents: history readers, stream parsers, transports (stdio-acp, stdio-app-server, stdio-stream-json, stdio-oneshot-jsonl), session stores, and stdin input encoders.",
   "sideEffects": false,
   "imports": {
     "#cli-session/*": "./src/*",
@@ -181,14 +181,6 @@
       "types": "./src/parsers/gemini-acp-responses.d.ts",
       "default": "./src/parsers/gemini-acp-responses.ts"
     },
-    "./parsers/opencode": {
-      "types": "./src/parsers/opencode.d.ts",
-      "default": "./src/parsers/opencode.ts"
-    },
-    "./parsers/opencode.ts": {
-      "types": "./src/parsers/opencode.d.ts",
-      "default": "./src/parsers/opencode.ts"
-    },
     "./session-stores/claude-projects": {
       "types": "./src/session-stores/claude-projects.d.ts",
       "default": "./src/session-stores/claude-projects.ts"
@@ -216,22 +208,6 @@
     "./session-stores": {
       "types": "./src/session-stores/index.d.ts",
       "default": "./src/session-stores/index.ts"
-    },
-    "./transports/_http-sse/sse-runner": {
-      "types": "./src/transports/_http-sse/sse-runner.d.ts",
-      "default": "./src/transports/_http-sse/sse-runner.ts"
-    },
-    "./transports/_http-sse/sse-runner.ts": {
-      "types": "./src/transports/_http-sse/sse-runner.d.ts",
-      "default": "./src/transports/_http-sse/sse-runner.ts"
-    },
-    "./transports/_http-sse/types": {
-      "types": "./src/transports/_http-sse/types.d.ts",
-      "default": "./src/transports/_http-sse/types.ts"
-    },
-    "./transports/_http-sse/types.ts": {
-      "types": "./src/transports/_http-sse/types.d.ts",
-      "default": "./src/transports/_http-sse/types.ts"
     },
     "./transports/_stdio-acp/block-merger": {
       "types": "./src/transports/_stdio-acp/block-merger.d.ts",
@@ -336,14 +312,6 @@
     "./transports/_stdio-stream-json/stream-reader.ts": {
       "types": "./src/transports/_stdio-stream-json/stream-reader.d.ts",
       "default": "./src/transports/_stdio-stream-json/stream-reader.ts"
-    },
-    "./transports/http-sse": {
-      "types": "./src/transports/http-sse.d.ts",
-      "default": "./src/transports/http-sse.ts"
-    },
-    "./transports/http-sse.ts": {
-      "types": "./src/transports/http-sse.d.ts",
-      "default": "./src/transports/http-sse.ts"
     },
     "./transports/stdio-acp": {
       "types": "./src/transports/stdio-acp.d.ts",
