@@ -32,7 +32,12 @@ export function parseCodexLine(raw: string): ParsedCodexLine | null {
 	if (!raw.trim()) return null;
 	try {
 		const obj = JSON.parse(raw);
-		if (typeof obj !== "object" || obj === null) return null;
+		// An ARRAY parses to an object and would sail through a typeof check while
+		// carrying no `type` and no `payload` — not a ParsedCodexLine. The only
+		// caller already dropped it on `evt.type !== "response_item"`, so refusing
+		// it here changes no observed message; it stops the function advertising a
+		// shape it does not produce (a-component-may-not-report-a-state-it-has-not-verified).
+		if (typeof obj !== "object" || obj === null || Array.isArray(obj)) return null;
 		return obj as ParsedCodexLine;
 	} catch {
 		return null;
