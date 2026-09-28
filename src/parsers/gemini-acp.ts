@@ -5,8 +5,7 @@
  *
  * ACP JSON-RPC notification parser. Maps a single parsed JSON-RPC frame
  * (the continuous `session/update` notification stream from gemini --acp)
- * to a ParsedEvent | null. Request/response handling lives in
- * gemini-acp-responses.ts.
+ * to a ParsedEvent | null.
  *
  * session/update notification types observed in live capture:
  *   - agent_thought_chunk  → thinking block
