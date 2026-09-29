@@ -82,7 +82,7 @@ export function convertCodexLineToFeedMessage(
 				}
 			}
 			if (parts.length === 0) return null;
-			return buildAssistantMessage(parts, ts, session);
+			return buildFeedMessage(parts, ts, session, "assistant");
 		} else if (role === "user") {
 			const content = payload.content as
 				| Array<Record<string, unknown>>
@@ -105,7 +105,7 @@ export function convertCodexLineToFeedMessage(
 				}
 			}
 			if (parts.length === 0) return null;
-			return buildUserMessage(parts, ts, session);
+			return buildFeedMessage(parts, ts, session, "user");
 		}
 	} else if (
 		ptype === "function_call" ||
@@ -118,46 +118,28 @@ export function convertCodexLineToFeedMessage(
 	return null;
 }
 
-function buildAssistantMessage(
+/**
+ * ONE builder for both roles. The Codex feed message differs only in the role,
+ * the parts it carries and the slot the message is filed under, so a copy per
+ * role is two places for the same eighteen fields to drift apart.
+ */
+function buildFeedMessage(
 	parts: FeedMessage["parts"],
 	ts: string,
 	session: OrchestratorSession,
+	role: "assistant" | "user",
 ): FeedMessage {
 	const sid = session.session_identifier ?? "";
 	return {
 		id: `codex-${sid}-${Date.now()}`,
-		role: "assistant",
+		role,
 		parts,
 		tokensInput: null,
 		tokensOutput: null,
 		tokensReasoning: null,
 		observedAt: ts,
 		source: "codex",
-		slotName: "Codex",
-		sessionId: session.id,
-		isSubagent: false,
-		provider: "codex",
-		model: session.model ?? null,
-		agent: null,
-	};
-}
-
-function buildUserMessage(
-	parts: FeedMessage["parts"],
-	ts: string,
-	session: OrchestratorSession,
-): FeedMessage {
-	const sid = session.session_identifier ?? "";
-	return {
-		id: `codex-${sid}-${Date.now()}`,
-		role: "user",
-		parts,
-		tokensInput: null,
-		tokensOutput: null,
-		tokensReasoning: null,
-		observedAt: ts,
-		source: "codex",
-		slotName: "You",
+		slotName: role === "assistant" ? "Codex" : "You",
 		sessionId: session.id,
 		isSubagent: false,
 		provider: "codex",
