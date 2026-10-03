@@ -57,7 +57,7 @@
 		"./parsers/gemini-acp": "./src/parsers/gemini-acp.ts",
 		"./parsers/gemini-acp.ts": "./src/parsers/gemini-acp.ts"
 	},
-	"repository": "https://github.com/teamgbg/bun-primitives-cli-protocol",
+	"repository": "https://github.com/teamgbg/primitives-cli-protocol-ts",
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org"
 	}
